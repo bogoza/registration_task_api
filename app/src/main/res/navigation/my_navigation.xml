@@ -9,7 +9,14 @@
         android:id="@+id/homeFrag2"
         android:name="com.example.registrationapi.home.HomeFrag"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFrag2_to_registerFrag2"
+            app:destination="@id/registerFrag2" />
+        <action
+            android:id="@+id/action_homeFrag2_to_loginFrag"
+            app:destination="@id/loginFrag" />
+    </fragment>
     <fragment
         android:id="@+id/registerFrag2"
         android:name="com.example.registrationapi.register.RegisterFrag"

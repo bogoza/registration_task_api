@@ -8,12 +8,12 @@ import org.json.JSONException
 import org.json.JSONObject
 
 class AuthRepository() {
-    private val apiService:IUserRegister? = null
+    private val apiService = Retrofit.apiService
 
     suspend fun loginUser(email:String,password:String): Flow<Resource> = flow{
         try {
-            val response = apiService?.loginUser(UserData(email, password))
-            response?.let {
+            val response = apiService.loginUser(UserData(email, password))
+            response.let {
                 if (response.isSuccessful){
                     val token = response.body()?.token
                     if (token != null){

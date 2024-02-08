@@ -3,28 +3,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_navigation"
-    app:startDestination="@id/homeFrag2">
+    app:startDestination="@id/homeFrag">
 
     <fragment
-        android:id="@+id/homeFrag2"
-        android:name="com.example.registrationapi.home.HomeFrag"
+        android:id="@+id/homeFrag"
+        android:name="com.example.registrationapi.screen.home.HomeFrag"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
             android:id="@+id/action_homeFrag2_to_registerFrag2"
-            app:destination="@id/registerFrag2" />
+            app:destination="@id/registerFrag" />
         <action
             android:id="@+id/action_homeFrag2_to_loginFrag"
             app:destination="@id/loginFrag" />
     </fragment>
     <fragment
-        android:id="@+id/registerFrag2"
-        android:name="com.example.registrationapi.register.RegisterFrag"
+        android:id="@+id/registerFrag"
+        android:name="com.example.registrationapi.screen.register.RegisterFrag"
         android:label="fragment_register"
         tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/loginFrag"
-        android:name="com.example.registrationapi.login.LoginFrag"
+        android:name="com.example.registrationapi.screen.login.LoginFrag"
         android:label="fragment_login"
         tools:layout="@layout/fragment_login" />
 </navigation>

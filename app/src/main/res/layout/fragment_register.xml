@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".register.RegisterFrag">
+    tools:context=".screen.register.RegisterFrag">
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/username_et"

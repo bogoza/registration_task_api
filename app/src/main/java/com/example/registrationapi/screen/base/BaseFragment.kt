@@ -1,4 +1,4 @@
-package com.example.registrationapi.base
+package com.example.registrationapi.screen.base
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import androidx.fragment.app.Fragment
 import androidx.viewbinding.ViewBinding
 
 typealias Inflater<T> = (LayoutInflater,ViewGroup,Boolean) -> T
-abstract class BaseFragment<VB:ViewBinding>(private val inflate:Inflater<VB>):Fragment() {
+abstract class BaseFragment<VB:ViewBinding>(private val inflate: Inflater<VB>):Fragment() {
     private var _binding:VB? = null
     protected val binding get() = _binding!!
 

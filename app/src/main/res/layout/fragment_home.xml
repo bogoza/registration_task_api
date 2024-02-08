@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".home.HomeFrag">
+    tools:context=".screen.home.HomeFrag">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/login_btn"

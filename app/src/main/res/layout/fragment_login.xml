@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".login.LoginFrag">
+    tools:context=".screen.login.LoginFrag">
 
     <androidx.appcompat.widget.AppCompatEditText
         android:id="@+id/email_et"

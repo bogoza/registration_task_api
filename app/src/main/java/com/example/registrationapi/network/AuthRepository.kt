@@ -41,4 +41,22 @@ class AuthRepository() {
             emit(Resource.Error("Login failed:${e.message}"))
         }
     }
+
+    suspend fun registerUser(email: String,password: String):Flow<Resource> = flow {
+        try {
+            val response = apiService.registerUser(UserData(email, password))
+            if (response.isSuccessful){
+                val token = response.body()?.token
+                if (token != null){
+                    emit(Resource.Success(token))
+                }else{
+                    emit(Resource.Error("Registration failed: Token is null"))
+                }
+            }else{
+                emit(Resource.Error("Registration failed: ${response.code()}"))
+            }
+        }catch (e:Exception){
+            emit(Resource.Error("Registration failed:${e.message}"))
+        }
+    }
 }
